@@ -31,6 +31,13 @@ int main(int argc, char *argv[])
     fflush(stdout);
     exit(EXIT_FAILURE);
   }
+
+  if (strlen(argv[2]) > MAX_NICKNAME_LENGTH)
+  {
+    printf("[ERROR] Nickname too long!\n");
+    fflush(stdout);
+    exit(EXIT_FAILURE);
+  }
   printf("Host %s, and port %s\n", destHost, destPort);
 
   addrinfo hints;
